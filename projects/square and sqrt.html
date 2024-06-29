@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+    </head>
+
+    <body class="bg-dark text-light">
+        <div class="container-fluid">
+            <h1 class="text-center">Sqare</h1>
+            <div class="row">
+                <div class="col text-center">
+                    <form id="square" action="">
+                        <p>Enter Any Number : </p>
+                        <input type="text" class="form-control w-50 mx-auto" id="anynum">
+                        <button class="btn btn-outline-danger mt-3 text-center" id="sqr">Get Sqr</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div id="output" class="col text-center mt-3 display-5 text-success"></div>
+            </div>
+            <h1 class="text-center">Sqare Root</h1>
+            <div class="row">
+                <div class="col text-center">
+                    <form id="square2" action="">
+                        <p>Enter Any Number : </p>
+                        <input type="text" class="form-control w-50 mx-auto" id="anynum2">
+                        <button class="btn btn-outline-danger mt-3 text-center" id="sqrrt">Get Sqr root</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div id="output2" class="col text-center mt-3 display-5 text-success"></div>
+            </div>
+        </div>
+        <script>
+            const form = document.querySelector("#square")
+            form.addEventListener("submit", function(e){
+                e.preventDefault()
+                const getnum = parseInt(document.querySelector("#anynum").value)
+                const output = document.querySelector("#output")
+                const total = getnum * getnum
+                output.innerHTML = total
+            })
+            const form2 = document.querySelector("#square2")
+            form2.addEventListener("submit", function(f){
+                f.preventDefault()
+                const getnum2 = parseInt(document.querySelector("#anynum2").value)
+                const output2 = document.querySelector("#output2")
+                const total2 = Math.sqrt(getnum2)
+                output2.innerHTML = total2
+            })
+        </script>
+        
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
