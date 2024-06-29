@@ -18,17 +18,19 @@
         />
     </head>
 
-    <body>
+    <body class="bg-dark text-light">
         <div class="container-fluid">
             <div class="row">
-                <div class="col">
-                    <h1>Multiplication</h1>
+                <div class="col text-center">
+                    <h1 class="mt-5">Multiplication</h1>
                     <form action="">
-                        <p><label for="">Enter first number :</label><input type="text" id="firstnum"></p>
-                        <p><label for="">Enter second number :</label><input type="text" id="secondnum"></p>
-                        <p><label for="">What Operation do you want to do : </label><input type="text" id="operation"></p>
-                        <button class="btn btn-success">Calculate</button>
-                        <div id="result"></div>
+                        <p class="mt-3"><label for="">Enter first number :</label></p><input type="text" class="form-control w-50 mx-auto text-center" placeholder="Enter Number" id="firstnum">
+                        <p class="mt-3"><label for="">Enter second number :</label></p><input type="text" class="form-control w-50 mx-auto text-center" placeholder="Enter Number" id="secondnum">
+                        <p class="mt-3"><label for="">What Operation do you want to do : </label></p><input type="text" class="form-control w-50 mx-auto text-center" placeholder="Enter Operation ex: + , * , - , /" id="operation">
+                        <div class="mt-3">
+                            <button class="btn btn-outline-success">Calculate</button>
+                            <div id="result" class="mt-3 text-primary display-4"></div>
+                        </div>
                     </form>
                 </div>
             </div>
