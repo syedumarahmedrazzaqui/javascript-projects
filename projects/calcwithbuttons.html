@@ -20,21 +20,86 @@
 
     <body>
         <div class="container-fluid">
-            <div class="row">
-                <div class="col">
-                    <input id="display" readonly>
+            <input id="display" class="form-control w-50 mx-auto" readonly>
+            <button  type="button" data-mdb-button-init value="4" data-mdb-ripple-init class="btn btn-light waves-effect">4</button>
+            <div class="row justify-content-center">
+                <div class="col-sm-1">
+                    <button  type="button" data-mdb-button-init value="8" data-mdb-ripple-init class="btn btn-light waves-effect">4</button>
+                </div>
+                <div class="col-sm-1">
+                    <button onclick="asehi('7')" class="btn btn-outline-primary py-3 px-4 rounded-circle">7</button>
+                </div>
+                <div class="col-sm-1">
+                    <button onclick="asehi('8')" class="btn btn-outline-primary py-3 px-4 rounded-circle">8</button>
+                </div>
+                <div class="col-sm-1">
+                    <button onclick="asehi('9')" class="btn btn-outline-primary py-3 px-4 rounded-circle">9</button>
                 </div>
             </div>
-            <div id="keys" class="row">
-                <div class="col-md-6">
-                    <button id="button" class="btn">Ac</button>
-                    <button id="button" class="btn">/</button>
-                    <button id="button" class="btn">*</button>
-                    <button id="button" class="btn">+</button>
-                    <button id="button" class="btn">-</button>
+            <div class="row justify-content-center">
+                <div class="col-sm-1">
+                    <button onclick="asehi('-')" class="btn btn-outline-primary py-3 px-4 rounded-circle">-</button>
+                </div>
+                <div class="col-sm-1">
+                    <button onclick="asehi('4')" class="btn btn-outline-primary py-3 px-4 rounded-circle">4</button>
+                </div>
+                <div class="col-sm-1">
+                    <button onclick="asehi('5')" class="btn btn-outline-primary py-3 px-4 rounded-circle">5</button>
+                </div>
+                <div class="col-sm-1">
+                    <button onclick="asehi('6')" class="btn btn-outline-primary py-3 px-4 rounded-circle">6</button>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-1">
+                    <button onclick="asehi('*')" class="btn btn-outline-primary py-3 px-4 rounded-circle">*</button>
+                </div>
+                <div class="col-sm-1">
+                    <button onclick="asehi('1')" class="btn btn-outline-primary py-3 px-4 rounded-circle">1</button>
+                </div>
+                <div class="col-sm-1">
+                    <button onclick="asehi('2')" class="btn btn-outline-primary py-3 px-4 rounded-circle">2</button>
+                </div>
+                <div class="col-sm-1">
+                    <button onclick="asehi('3')" class="btn btn-outline-primary py-3 px-4 rounded-circle">3</button>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-1">
+                    <button onclick="asehi('/')" class="btn btn-outline-primary py-3 px-4 rounded-circle">/</button>
+                </div>
+                <div class="col-sm-1">
+                    <button onclick="asehi('0')" class="btn btn-outline-primary py-3 px-4 rounded-circle">0</button>
+                </div>
+                <div class="col-sm-1">
+                    <button onclick="asehi('.')" class="btn btn-outline-primary py-3 px-4 rounded-circle">.</button>
+                </div>
+                <div class="col-sm-1">
+                    <button onclick="calculate('=')" class="btn btn-outline-primary py-3 px-4 rounded-circle">=</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1">
+                    <button onclick="clearDisplay()" class="btn btn-outline-primary ofset-10 py-3 px-4 rounded-circle">C</button>
                 </div>
             </div>
         </div>
+        <script>
+            const display = document.querySelector("#display")
+            display.addEventListener("click", (input)=>{
+                display.value += input
+            })
+            // function asehi(input){
+            //     display.value += input
+            // }
+
+            function clearDisplay() {
+                display.value = ""
+            }
+            function calculate() {
+                display.value = eval(display.value)
+            }
+        </script>
         <!-- Bootstrap JavaScript Libraries -->
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
