@@ -41,6 +41,10 @@
             <div class="row">
                 <div class="col-md-12">
                     <h3 id="ternary1"></h3>
+                    <h3 id="equalto"></h3>
+                    <h3 id="second"></h3>
+                    <h3 id="third"></h3>
+                    <h3 id="fourth"></h3>
                 </div>
             </div>
         </div>
@@ -86,6 +90,27 @@
             let age = 20
             const check = age >= 18 ? "You Can Apply For Driving License" : "You Can Not Apply For License"
             tern1.innerHTML = check
+
+            let first = 10 
+            const equal = document.querySelector("#equalto")
+            if (first == 10) {
+                equal.innerHTML = "equal"
+            }
+            let sec = 10 
+            const greater = document.querySelector("#second")
+            if (sec > 8) {
+                second.innerHTML = "greaterthan"
+            }
+            let third = 10 
+            const lessthan = document.querySelector("#third")
+            if (third < 20) {
+                lessthan.innerHTML = "lessthan"
+            }
+            let fourth = 10 
+            const equaltoorgreaterthen = document.querySelector("#fourth")
+            if (fourth >= 10) {
+                equaltoorgreaterthen.innerHTML = "equalto or greater than"
+            }
         </script>
         <!-- Bootstrap JavaScript Libraries -->
         <script
