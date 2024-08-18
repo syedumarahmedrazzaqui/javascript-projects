@@ -18,7 +18,15 @@
         const changetext = function(){
             document.querySelector('h1').innerHTML = "best js series"
         }
-        setTimeout(changetext, 1000*5)
+        
+        const changeMe = setTimeout(changetext, 1000*5)
+
+        const stop = document.querySelector("#stop").
+        addEventListener('click', function(){
+            clearTimeout(changeMe)
+            console.log("stopped");
+            
+        })
         setTimeout(sayzaid, 1000 * 3);
     </script>
 </body>
