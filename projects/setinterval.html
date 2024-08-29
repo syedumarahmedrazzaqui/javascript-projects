@@ -12,19 +12,29 @@
 
     <script>
         const sayDate = function(str){
-            console.log(str, Date.now());
+            console.log(str, new Date());
             
         }
-        let intervalID;
         const start = document.querySelector("#start")
-        .addEventListener('click', function (){
+        //we can assign many event listener on same button
+        const hello = event => {
+            console.log("hello")
+        }
+        start.addEventListener('click', hello)
+        let intervalID;
+        const saydate = event => {
             intervalID = setInterval(sayDate, 100*3 , "hi");
-        })
+        }
+        start.addEventListener('click', saydate )
+        //this is used to remmove event listener
+        start.removeEventListener('click', hello)
 
+        // agar koi bhi event listener lagana hai to function bahar bhi bana ke call kar sakte
         const stop = document.querySelector("#stop")
-        .addEventListener('click', function(){
+        const stopit = event => {
             clearInterval(intervalID)
-        })
+        }
+        stop.addEventListener('click', stopit)
     </script>
 </body>
 </html>
